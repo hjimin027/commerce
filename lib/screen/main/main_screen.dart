@@ -22,6 +22,22 @@ class _MainScreenState extends State<MainScreen> {
           Container(color: Colors.green,),
         ],
       ),
+      bottomNavigationBar: navigationBar(),
+    );
+  }
+
+
+  BottomNavigationBar navigationBar(){
+    return BottomNavigationBar(items: [
+      BottomNavigationBarItem(icon: Icon(Icons.home), label: "홈"),
+      BottomNavigationBarItem(icon: Icon(Icons.category_outlined), label: "카테고리"),
+      BottomNavigationBarItem(icon: Icon(Icons.shopping_cart), label: "장바구니"),
+    ],
+      currentIndex: currentIndex,
+      onTap: (value) {
+        currentIndex = value;
+        setState(() {});  //화면갱신
+      },
     );
   }
 }
