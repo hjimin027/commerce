@@ -1,4 +1,5 @@
 import 'package:commerce/asset_path.dart';
+import 'package:commerce/model/product_model.dart';
 import 'package:commerce/screen/home/home_widgets.dart';
 import 'package:flutter/material.dart';
 
@@ -18,6 +19,9 @@ class _HomeScreenState extends State<HomeScreen> {
   ];
 
   int currentIndex = 0;
+  List<ProductModel> newProductList = [
+    ProductModel(AssetPath.productJacketJean, "청자켓", 50000, 31, 4.8, false)
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -68,6 +72,13 @@ class _HomeScreenState extends State<HomeScreen> {
           
           SizedBox(height: 24,),
           HomeWidgets.subTitle("신제품"),
+          /// 리스트뷰를 가로 스크롤 위젯 추가
+          /// 데이터모델 추가: ProductModel
+          /// String image, String name,
+          /// int price, int reviewCount,
+          /// double reviewRating, bool cart
+
+          HomeWidgets.productHorizontal(newProductList)
         ],
       ),
     );
