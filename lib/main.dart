@@ -1,4 +1,5 @@
 import 'package:commerce/screen/main/main_screen.dart';
+import 'package:commerce/util/custom_scroll_behavior.dart';
 import 'package:flutter/material.dart';
 
 
@@ -17,6 +18,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.lightBlue  // 기본 컬러 팔레트
       ),
       home: MainScreen(),
+      scrollBehavior: CustomScrollBehavior(),
     );
   }
 }
