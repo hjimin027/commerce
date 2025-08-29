@@ -20,7 +20,11 @@ class _HomeScreenState extends State<HomeScreen> {
 
   int currentIndex = 0;
   List<ProductModel> newProductList = [
-    ProductModel(AssetPath.productJacketJean, "청자켓", 50000, 31, 4.8, false)
+    ProductModel(AssetPath.productJacketJean, "청자켓", 50000, 31, 4.8, false),
+    ProductModel(AssetPath.productBag, "가방", 46000, 14, 3.5, false),
+    ProductModel(AssetPath.productShoes, "신발", 30000, 213, 1.0, false),
+    ProductModel(AssetPath.productManJacket, "남성 자켓", 80000, 42, 3.5, false),
+    ProductModel(AssetPath.productWomen, "여성 옷", 32000, 4, 5.0, false)
   ];
 
   @override

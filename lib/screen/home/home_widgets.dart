@@ -49,12 +49,15 @@ class HomeWidgets {
     return SizedBox(
       height: 300,
       child: ListView.builder(
+        padding: EdgeInsets.symmetric(horizontal: 16),
         scrollDirection: Axis.horizontal,
         itemCount: dataList.length,
         itemBuilder: (context, index) {
           var productModel = dataList[index];
-          return SizedBox(
+          bool lastIndex = index == dataList.length - 1;
+          return Container(
             width: 150,
+            margin: EdgeInsets.only(right: lastIndex ? 0 : 16), // lastIndex인 경우에는 rigth margin X
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
