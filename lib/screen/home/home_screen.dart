@@ -76,13 +76,17 @@ class _HomeScreenState extends State<HomeScreen> {
           
           SizedBox(height: 24,),
           HomeWidgets.subTitle("신제품"),
-          /// 리스트뷰를 가로 스크롤 위젯 추가
-          /// 데이터모델 추가: ProductModel
-          /// String image, String name,
-          /// int price, int reviewCount,
-          /// double reviewRating, bool cart
+          HomeWidgets.productHorizontal(newProductList),
 
-          HomeWidgets.productHorizontal(newProductList)
+          SizedBox(height: 24,),
+          HomeWidgets.subTitle("이벤트"),
+          SizedBox( //사진 크기를 단순히 설정하지 말고, container 사용!(html의 div 느낌)
+            height: 200, width: double.infinity,
+            child: Image.asset(
+              AssetPath.event,
+              fit: BoxFit.cover,
+            ),
+          )
         ],
       ),
     );

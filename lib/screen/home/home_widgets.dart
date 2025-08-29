@@ -45,6 +45,7 @@ class HomeWidgets {
     );
   }
 
+  /// 리스트뷰를 가로 스크롤 위젯 추가
   static Widget productHorizontal(List<ProductModel> dataList) {
     return SizedBox(
       height: 300,
