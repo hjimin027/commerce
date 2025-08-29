@@ -37,7 +37,9 @@ class _HomeScreenState extends State<HomeScreen> {
               ],
             ),
           ), //좌우로 스크롤할 수 있는 위젯
+          SizedBox(height: 24,),
           Row(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: List.generate(imageList.length, (index) {
               return AnimatedContainer(
                 duration: Duration(milliseconds: 300),
