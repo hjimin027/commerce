@@ -64,7 +64,10 @@ class _HomeScreenState extends State<HomeScreen> {
             AssetPath.skirt,
             AssetPath.trousers,
             AssetPath.shirt,
-          ])
+          ]),
+          
+          SizedBox(height: 24,),
+          HomeWidgets.subTitle("신제품"),
         ],
       ),
     );

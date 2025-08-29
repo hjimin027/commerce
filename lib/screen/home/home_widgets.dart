@@ -29,4 +29,13 @@ class HomeWidgets {
       },),
     );
   }
+
+  static Widget subTitle(String title) {
+    return Row(
+      children: [
+        SizedBox(width: 16,),
+        Text(title, style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),)
+      ],
+    );
+  }
 }
